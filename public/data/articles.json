@@ -1,0 +1,184 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "Modificări Cod Fiscal 2025 - Impozit pe profit și venit",
+      "category": "fiscal",
+      "date": "15 Noiembrie 2025",
+      "summary": "Ordonanța de Urgență nr. 115/2024 aduce modificări importante în Codul Fiscal, cu impact direct asupra impozitului pe profit și a impozitului pe venit pentru anul fiscal 2025.",
+      "highlights": [
+        "Cota de impozit pe profit rămâne 16%, dar microîntreprinderile cu venituri peste 500.000 euro trec la regimul de impozit pe profit",
+        "Noi praguri pentru microîntreprinderi: 3% pentru venituri sub 60.000 euro și 1% pentru IT/producție/construcții",
+        "Modificări la regimul de amortizare fiscală - durate minime actualizate conform OMFP 2844/2016",
+        "Clarificări privind deductibilitatea cheltuielilor de protocol: limită de 2% din baza de calcul",
+        "Split TVA opțional pentru firme cu risc fiscal scăzut - cerere la ANAF până pe 25 ianuarie"
+      ],
+      "link": "https://www.anaf.ro"
+    },
+    {
+      "id": 2,
+      "title": "Noi obligații de raportare - Declarația 406 pentru beneficiari reali",
+      "category": "fiscal",
+      "date": "10 Noiembrie 2025",
+      "summary": "ANAF introduce noi obligații de raportare pentru 2025. Toate societățile trebuie să depună Declarația 406 privind beneficiarii reali, conform Directivei UE privind prevenirea spălării banilor.",
+      "highlights": [
+        "Declarația 406 trebuie depusă până pe 31 martie 2025 pentru beneficiarii reali la 31 decembrie 2024",
+        "Identificarea obligatorie a persoanelor fizice care dețin sau controlează în final societatea",
+        "Sancțiuni între 5.000 și 20.000 lei pentru nedepunere sau date incorecte",
+        "Raportare obligatorie a modificărilor în cel mult 15 zile de la producere",
+        "Informațiile se transmit electronic prin SPV (Spațiul Privat Virtual)"
+      ],
+      "link": "https://www.anaf.ro"
+    },
+    {
+      "id": 3,
+      "title": "Salariu minim 2025: Creștere la 3.700 lei brut și 4.050 lei pentru construcții",
+      "category": "hr",
+      "date": "5 Noiembrie 2025",
+      "summary": "Guvernul a aprobat prin HG creșterea salariului minim brut pe economie de la 3.300 lei la 3.700 lei începând cu 1 ianuarie 2025. Sectorul construcții beneficiază de salariu minim diferențiat de 4.050 lei.",
+      "highlights": [
+        "Salariu minim brut: 3.700 lei/lună (aproximativ 21,94 lei/oră pentru 168,67 ore/lună)",
+        "Salariu minim în construcții: 4.050 lei brut pentru salariații cu studii medii și meserie în construcții",
+        "Impact: crește și contribuția angajatorului (CAS 25%, CASS 10%, contribuția pentru muncă 2,25%)",
+        "Angajatorii trebuie să actualizeze contractele de muncă prin acte adiționale până pe 31 decembrie 2024",
+        "Noul salariu net (fără deduceri personale): aproximativ 2.255 lei"
+      ],
+      "link": "https://www.inspectiamuncii.ro"
+    },
+    {
+      "id": 4,
+      "title": "e-Transport: Noua declarație electronică pentru transport rutier de mărfuri",
+      "category": "fiscal",
+      "date": "1 Noiembrie 2025",
+      "summary": "ANAF implementează sistemul e-Transport pentru monitorizarea electronică a transportului rutier de mărfuri. Obligatoriu din 1 iulie 2025 pentru transporturi naționale peste 500 kg.",
+      "highlights": [
+        "Declarație prealabilă obligatorie pentru fiecare transport de mărfuri pe teritoriul României",
+        "Se transmite electronic prin SPV cu cel puțin 1 oră înainte de începerea transportului",
+        "Aplicabil transporturilor de mărfuri cu greutate totală peste 500 kg",
+        "Excepții: transport produse agricole proprii, servicii de mutare, deșeuri municipale",
+        "Amenzi de la 5.000 la 10.000 lei pentru nedeclarare sau date incorecte"
+      ],
+      "link": "https://www.anaf.ro/etransport"
+    },
+    {
+      "id": 5,
+      "title": "OMFP 1802/2024 - Noi norme contabile conforme IFRS pentru raportări individuale",
+      "category": "contabil",
+      "date": "28 Octombrie 2025",
+      "summary": "Ministerul Finanțelor a publicat OMFP 1802/2024 care aduce modificări importante în normele metodologice privind aplicarea IAS/IFRS în contabilitatea individuală a companiilor.",
+      "highlights": [
+        "Aplicabil societăților care aplică IFRS în situațiile financiare individuale",
+        "Clarificări privind recunoașterea veniturilor conform IFRS 15",
+        "Noi cerințe de prezentare și notele explicative la situațiile financiare",
+        "Modificări la tratamentul contabil al instrumentelor financiare - IFRS 9",
+        "Intrare în vigoare pentru exercițiul financiar 2025, cu aplicare retrospectivă opțională pentru 2024"
+      ],
+      "link": "https://www.mfinante.gov.ro"
+    },
+    {
+      "id": 6,
+      "title": "Factură electronică (RO e-Factura) - Extindere și noi obligații 2025",
+      "category": "fiscal",
+      "date": "25 Octombrie 2025",
+      "summary": "Sistemul național de factură electronică RO e-Factura devine obligatoriu pentru mai multe categorii de tranzacții B2B începând cu 1 ianuarie 2025.",
+      "highlights": [
+        "Obligatoriu pentru toate facturile B2B emise către firme înregistrate în scopuri de TVA",
+        "Facturi B2C opționale, dar recomandate pentru eficiență",
+        "Termen de raportare: maximum 5 zile de la data emiterii facturii",
+        "Noi funcționalități: descărcare automată în software de contabilitate prin API",
+        "Amenzi de la 500 la 4.000 lei pentru neîncărcarea facturilor în termen"
+      ],
+      "link": "https://www.anaf.ro/efactura"
+    },
+    {
+      "id": 7,
+      "title": "DAC7 - Raportare obligatorie pentru platformele digitale",
+      "category": "fiscal",
+      "date": "20 Octombrie 2025",
+      "summary": "Directiva DAC7 introduce obligații de raportare pentru operatorii platformelor digitale privind veniturile realizate de vânzători pe platformă. Prima raportare: 31 ianuarie 2025.",
+      "highlights": [
+        "Operatorii platformelor (eMag Marketplace, OLX, Airbnb, etc.) trebuie să raporteze veniturile vânzătorilor",
+        "Raportare obligatorie pentru vânzători activi: peste 30 tranzacții SAU peste 2.000 euro/an",
+        "Informații raportate: identitate vânzător, sume încasate, taxe colectate, număr tranzacții",
+        "Schimb automat de informații între statele membre UE",
+        "Vânzătorii vor primi notificare de la platformă dacă sunt raportați la ANAF"
+      ],
+      "link": "https://ec.europa.eu/taxation_customs/dac7"
+    },
+    {
+      "id": 8,
+      "title": "Contribuții sociale 2025 - Modificări la CAS, CASS și contribuția asiguratorie",
+      "category": "hr",
+      "date": "15 Octombrie 2025",
+      "summary": "Noi reguli pentru calculul și plata contribuțiilor sociale (CAS, CASS) și a contribuției asiguratorii pentru muncă începând cu 1 ianuarie 2025.",
+      "highlights": [
+        "CAS angajat: 25% din salariul brut (neschimbat), CAS angajator: 0% (suportat integral de angajat)",
+        "CASS: 10% din salariul brut, contribuție pentru muncă: 2,25% la sarcina angajatorului",
+        "Plafon maxim pentru CAS: 25 x câștigul salarial mediu brut (aprox. 185.000 lei anual în 2025)",
+        "Contribuția individuală pentru PFA/II: CAS 25% și CASS 10% din venitul net anual",
+        "Termenul de plată: 25 inclusiv a lunii următoare celei pentru care se datorează"
+      ],
+      "link": "https://www.anaf.ro"
+    },
+    {
+      "id": 9,
+      "title": "Facilități fiscale pentru investiții în cercetare-dezvoltare și inovare",
+      "category": "fiscal",
+      "date": "10 Octombrie 2025",
+      "summary": "Guvernul extinde facilitățile fiscale pentru companiile care investesc în cercetare-dezvoltare, inovare și digitalizare. Deducere suplimentară de 50% pentru cheltuielile eligibile.",
+      "highlights": [
+        "Deducere suplimentară de 50% din cheltuielile cu C&D din profitul impozabil",
+        "Scutire de impozit pe profit pentru veniturile din vânzarea invențiilor brevetate",
+        "Cheltuieli eligibile: salarii personal C&D, materiale, amortizare echipamente, servicii externe",
+        "Obligația menținerii activității de C&D cel puțin 3 ani de la acordarea facilității",
+        "Procedură: depunere declarație 101 cu anexă specială și raport anual de activitate"
+      ],
+      "link": "https://www.anaf.ro"
+    },
+    {
+      "id": 10,
+      "title": "GDPR - Noi amenzi și obligații pentru protecția datelor personale în 2025",
+      "category": "hr",
+      "date": "5 Octombrie 2025",
+      "summary": "ANSPDCP intensifică controalele privind respectarea GDPR. Amenzi majore pentru companii care nu protejează corespunzător datele personale ale angajaților și clienților.",
+      "highlights": [
+        "Obligația informării ANSPDCP în max 72 ore de la descoperirea unei încălcări de date",
+        "Evaluarea impactului obligatorie pentru procesări cu risc ridicat (monitorizare angajați, date sensibile)",
+        "Amenzi până la 20 milioane euro sau 4% din cifra de afaceri globală anuală",
+        "Registrul de evidență a operațiunilor de prelucrare - obligatoriu și actualizat",
+        "Drepturile angajaților: acces la date, rectificare, ștergere, portabilitate"
+      ],
+      "link": "https://www.dataprotection.ro"
+    },
+    {
+      "id": 11,
+      "title": "Registrul Unic de Control (RUC) - Procedură electronică unificată",
+      "category": "contabil",
+      "date": "1 Octombrie 2025",a
+      "summary": "Registrul Unic de Control devine 100% electronic din ianuarie 2025. Toate controalele ANAF, ITM, ANSVSA, Garda de Mediu se înregistrează obligatoriu în platformă.",
+      "highlights": [
+        "Acces la RUC prin SPV - se pot verifica toate controalele anterioare și în curs",
+        "Organele de control nu mai pot începe inspecții fără înregistrare prealabilă în RUC",
+        "Companiile primesc notificare automată înainte de control (cu excepții pentru investigații)",
+        "Rapoarte de control disponibile online imediat după finalizare",
+        "Reducere drastică a controalelor suprapuse de la instituții diferite"
+      ],
+      "link": "https://www.anaf.ro/ruc"
+    },
+    {
+      "id": 12,
+      "title": "Declarația informativă 394 - Extindere pentru operațiuni intracomunitare",
+      "category": "fiscal",
+      "date": "25 Septembrie 2025",
+      "summary": "Declarația 394 privind livrările/achizițiile/prestările intracomunitare se extinde cu noi informații începând cu raportarea pentru ianuarie 2025.",
+      "highlights": [
+        "Raportare obligatorie a detaliilor suplimentare: țara de origine, cod NC (Nomenclatura Combinată)",
+        "Termen depunere: până în data de 25 inclusiv a lunii următoare perioadei de raportare",
+        "Trebuie raportate TOATE operațiunile intracomunitare, nu doar peste prag",
+        "Corespondența cu fișierul SAF-T pentru TVA - reconciliere automată ANAF",
+        "Amenzi 500-1.000 lei pentru fiecare declarație nedepusă sau incompletă"
+      ],
+      "link": "https://www.anaf.ro"
+    }
+  ]
+}
