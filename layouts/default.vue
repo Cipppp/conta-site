@@ -35,8 +35,10 @@
               <strong>Contact:</strong><br>
               Str. Tudor Vladimirescu, nr. 95<br>
               Ploiești, Prahova<br>
-              Tel: <a href="tel:+40722123456">+40 722 123 456</a><br>
-              Email: <a href="mailto:office@accountingexpert.ro">office@accountingexpert.ro</a>
+              Tel: <a href="tel:+40762205999">+40 762 205 999</a><br>
+              Tel: <a href="tel:+40344802302">+40 344 802 302</a><br>
+              Mobil: <a href="tel:+40766333433">+40 766 333 433</a><br>
+              Email: <a href="mailto:loredana@analizaserv.ro">loredana@analizaserv.ro</a>
             </p>
           </div>
           <div class="footer-section">
@@ -77,12 +79,39 @@ const toggleMenu = () => {
   }
 };
 
+const closeMenu = () => {
+  if (process.client) {
+    const navMenu = document.getElementById('navMenu');
+    const hamburger = document.getElementById('hamburger');
+    navMenu?.classList.remove('active');
+    hamburger?.classList.remove('active');
+  }
+};
+
 onMounted(() => {
   if (process.client) {
     // Load the script.js for WhatsApp contact
     const script = document.createElement('script');
     script.src = '/js/script.js';
     document.body.appendChild(script);
+
+    // Close menu when clicking on a link
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (event) => {
+      const navMenu = document.getElementById('navMenu');
+      const hamburger = document.getElementById('hamburger');
+      const isClickInsideNav = navMenu?.contains(event.target);
+      const isClickOnHamburger = hamburger?.contains(event.target);
+
+      if (!isClickInsideNav && !isClickOnHamburger && navMenu?.classList.contains('active')) {
+        closeMenu();
+      }
+    });
   }
 });
 </script>

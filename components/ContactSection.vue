@@ -9,18 +9,21 @@
       <div class="contact-cards">
         <div class="contact-card">
           <div class="card-icon">
-            <i class="fas fa-map-marker-alt"></i>
+            <i class="fas fa-phone-alt"></i>
           </div>
-          <h3>Vizitează-ne</h3>
-          <p>Str. Tudor Vladimirescu, nr. 95<br>Ploiești, Prahova</p>
+          <h3>Telefon</h3>
+          <p>
+            <a href="tel:+40762205999">+40 762 205 999</a><br>
+            <a href="tel:+40344802302">+40 344 802 302</a>
+          </p>
         </div>
 
         <div class="contact-card">
           <div class="card-icon">
-            <i class="fas fa-phone-alt"></i>
+            <i class="fas fa-mobile-alt"></i>
           </div>
-          <h3>Sună-ne</h3>
-          <p><a href="tel:+40722123456">+40 722 123 456</a></p>
+          <h3>Mobil / WhatsApp</h3>
+          <p><a href="tel:+40766333433">+40 766 333 433</a></p>
           <button class="whatsapp-btn" @click="contactWhatsApp">
             <i class="fab fa-whatsapp"></i> WhatsApp
           </button>
@@ -30,16 +33,12 @@
           <div class="card-icon">
             <i class="fas fa-envelope"></i>
           </div>
-          <h3>Scrie-ne</h3>
-          <p><a href="mailto:office@accountingexpert.ro">office@accountingexpert.ro</a></p>
-        </div>
-
-        <div class="contact-card">
-          <div class="card-icon">
-            <i class="fas fa-clock"></i>
-          </div>
-          <h3>Program</h3>
-          <p>Luni - Vineri<br>09:00 - 17:00</p>
+          <h3>Email</h3>
+          <p>
+            <a href="mailto:loredana@analizaserv.ro">loredana@analizaserv.ro</a><br>
+            <a href="mailto:loredobre@gmail.com">loredobre@gmail.com</a><br>
+            <a href="mailto:loredobre@yahoo.com">loredobre@yahoo.com</a>
+          </p>
         </div>
       </div>
     </div>
@@ -125,7 +124,7 @@ const contactWhatsApp = () => {
 
 .contact-card p {
   color: var(--text-light);
-  line-height: 1.6;
+  line-height: 1.8;
   margin: 0;
   font-size: 1.05rem;
 }
