@@ -29,7 +29,7 @@
           <div class="footer-section">
             <h3>Accounting Business Expert</h3>
             <p>SC Accounting Business Expert for Everyone SRL</p>
-            <p>CUI: ROxxxxxxx</p>
+            <p>CUI: 34751282</p>
             <p>Înregistrat la CECCAR - Filiala Prahova</p>
             <p style="margin-top: 1.5rem;">
               <strong>Contact:</strong><br>
