@@ -4,7 +4,7 @@
     <section class="services-hero">
       <div class="container">
         <h1>Serviciile noastre</h1>
-        <p>Soluții complete de contabilitate și consultanță fiscală pentru afacerea ta</p>
+        <p>Soluții complete de contabilitate, resurse umane și consultanță pentru afacerea ta</p>
       </div>
     </section>
 
@@ -75,18 +75,18 @@
           </div>
         </div>
 
-        <!-- Service 3: Salarizare -->
-        <div id="salarizare" class="service-section">
+        <!-- Service 3: Resurse Umane -->
+        <div id="resurse-umane" class="service-section">
           <div class="service-header">
             <div class="service-header-icon"><i class="fas fa-users"></i></div>
             <div>
-              <h2>Servicii de personal și salarizare</h2>
+              <h2>Servicii de resurse umane</h2>
               <p>Administrare completă a resurselor umane</p>
             </div>
           </div>
           <div class="service-content">
             <div class="service-description">
-              <p>Gestionăm întreaga activitate de personal și salarizare, asigurând conformitatea cu legislația muncii și respectarea termenelor legale pentru toate raportările.</p>
+              <p>Gestionăm întreaga activitate de personal, asigurând conformitatea cu legislația muncii și respectarea termenelor legale pentru toate raportările.</p>
 
               <h3>Servicii oferite:</h3>
               <ul class="service-list">
@@ -104,7 +104,59 @@
           </div>
         </div>
 
-        <!-- Service 4: Înființare Firme -->
+        <!-- Service 4: Expertiza Contabilă și Judiciară -->
+        <div id="expertiza" class="service-section">
+          <div class="service-header">
+            <div class="service-header-icon"><i class="fas fa-balance-scale"></i></div>
+            <div>
+              <h2>Expertiză contabilă și judiciară</h2>
+              <p>Servicii specializate de expertiză pentru situații complexe</p>
+            </div>
+          </div>
+          <div class="service-content">
+            <div class="service-description">
+              <p>Oferim servicii profesionale de expertiză contabilă și judiciară, realizate de experți autorizați, pentru susținerea intereselor dumneavoastră în litigii sau situații complexe.</p>
+
+              <h3>Servicii de expertiză:</h3>
+              <ul class="service-list">
+                <li>Expertize contabile judiciare în dosare civile și penale</li>
+                <li>Expertize extrajudiciare pentru clarificarea unor situații financiare</li>
+                <li>Evaluări de prejudicii și daune</li>
+                <li>Analiză forensică a documentelor financiar-contabile</li>
+                <li>Rapoarte de expertiză pentru instanțe de judecată</li>
+                <li>Asistență în litigii comerciale și financiare</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 5: Certificare Bilanțuri -->
+        <div id="certificare" class="service-section">
+          <div class="service-header">
+            <div class="service-header-icon"><i class="fas fa-stamp"></i></div>
+            <div>
+              <h2>Certificare bilanțuri</h2>
+              <p>Validare profesională a situațiilor financiare</p>
+            </div>
+          </div>
+          <div class="service-content">
+            <div class="service-description">
+              <p>Asigurăm certificarea bilanțurilor contabile în conformitate cu legislația în vigoare și standardele profesionale, oferind credibilitate situațiilor financiare ale companiei dumneavoastră.</p>
+
+              <h3>Servicii de certificare:</h3>
+              <ul class="service-list">
+                <li>Certificarea bilanțului contabil anual</li>
+                <li>Verificarea conformității cu reglementările contabile</li>
+                <li>Validarea situațiilor financiare pentru terți (bănci, investitori)</li>
+                <li>Certificări pentru accesarea de finanțări</li>
+                <li>Rapoarte de certificare conforme cu standardele CECCAR</li>
+                <li>Consultanță pentru îmbunătățirea calității raportărilor financiare</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 6: Înființare Firme -->
         <div id="infiintare" class="service-section">
           <div class="service-header">
             <div class="service-header-icon"><i class="fas fa-building"></i></div>
@@ -133,7 +185,35 @@
           </div>
         </div>
 
-        <!-- Service 5: Analiză Financiară -->
+        <!-- Service 7: Lichidare Societăți -->
+        <div id="lichidare" class="service-section">
+          <div class="service-header">
+            <div class="service-header-icon"><i class="fas fa-file-contract"></i></div>
+            <div>
+              <h2>Consultanță privind lichidarea societăților</h2>
+              <p>Asistență completă în procesul de închidere a firmei</p>
+            </div>
+          </div>
+          <div class="service-content">
+            <div class="service-description">
+              <p>Oferim servicii complete de consultanță și asistență în procesul de lichidare a societăților comerciale, asigurând respectarea tuturor procedurilor legale și minimizarea consecințelor fiscale.</p>
+
+              <h3>Servicii de lichidare:</h3>
+              <ul class="service-list">
+                <li>Consultanță privind procedurile de lichidare voluntară sau dizolvare</li>
+                <li>Întocmirea documentației necesare pentru dizolvare și lichidare</li>
+                <li>Asistență în închiderea exercițiului financiar</li>
+                <li>Întocmirea bilanțului de lichidare</li>
+                <li>Gestionarea obligațiilor fiscale în perioada de lichidare</li>
+                <li>Asistență la radierea din Registrul Comerțului</li>
+                <li>Consultanță privind aspectele juridice și fiscale ale lichidării</li>
+                <li>Reprezentare în relația cu autoritățile</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 8: Analiză Financiară -->
         <div id="analiza" class="service-section">
           <div class="service-header">
             <div class="service-header-icon"><i class="fas fa-chart-line"></i></div>
@@ -179,9 +259,7 @@
                 <li>Consultanță la achiziționarea de echipamente hardware</li>
                 <li>Consultanță în alegerea sistemului informatic necesar activității</li>
                 <li>Consultanță și asistență în implementarea de sisteme integrate (ERP)</li>
-                <li>Dezvoltarea de pachete software specifice specializate în diverse domenii</li>
                 <li>Integrarea sistemelor IT în sistemul existent al companiei</li>
-                <li>Design și gestionare pagini web</li>
                 <li>Instruire pentru utilizarea software-urilor contabile</li>
               </ul>
             </div>
@@ -248,20 +326,42 @@ const contactWhatsApp = () => {
 
 <style scoped>
 .services-hero {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background-image: url('~/assets/css/cover.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
   color: white;
   text-align: center;
   padding: 4rem 20px;
 }
 
+.services-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.services-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
 .services-hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .services-hero p {
   font-size: 1.25rem;
   opacity: 0.9;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .services-detail {

@@ -4,7 +4,10 @@
     <header class="header">
       <nav class="nav-container">
         <div class="logo-box">
-          <h2>Accounting Business Expert</h2>
+          <div class="logo-text-wrapper">
+            <h2 class="logo-text">Accounting Business Expert</h2>
+            <span class="logo-tagline">for Everyone</span>
+          </div>
         </div>
         <ul class="nav-menu" id="navMenu">
           <li><NuxtLink to="/" :class="{ active: $route.path === '/' }">Acasă</NuxtLink></li>
@@ -35,10 +38,11 @@
               <strong>Contact:</strong><br>
               Str. Tudor Vladimirescu, nr. 95<br>
               Ploiești, Prahova<br>
-              Tel: <a href="tel:+40762205999">+40 762 205 999</a><br>
-              Tel: <a href="tel:+40344802302">+40 344 802 302</a><br>
-              Mobil: <a href="tel:+40766333433">+40 766 333 433</a><br>
-              Email: <a href="mailto:loredana@analizaserv.ro">loredana@analizaserv.ro</a>
+              Tel: <a href="tel:+40766333433">+40 766 333 433</a><br>
+              Tel: <a href="tel:+40764218182">+40 764 218 182</a><br>
+              Tel: <a href="tel:+40767019025">+40 767 019 025</a><br>
+              Email: <a href="mailto:office@accountingbusiness.ro">office@accountingbusiness.ro</a><br>
+              Email: <a href="mailto:loredana@accountingbusiness.ro">loredana@accountingbusiness.ro</a>
             </p>
           </div>
           <div class="footer-section">
@@ -48,17 +52,17 @@
               <li><NuxtLink to="/servicii">Servicii</NuxtLink></li>
               <li><NuxtLink to="/calculator">Calculator taxe</NuxtLink></li>
             </ul>
-          </div>
-          <div class="footer-section">
-            <h4>Servicii principale</h4>
+            <h4 style="margin-top: 2rem;">Servicii principale</h4>
             <ul>
               <li><NuxtLink to="/servicii#contabilitate">Contabilitate</NuxtLink></li>
               <li><NuxtLink to="/servicii#consultanta">Consultanță Fiscală</NuxtLink></li>
-              <li><NuxtLink to="/servicii#salarizare">Salarizare</NuxtLink></li>
-              <li><NuxtLink to="/servicii#infiintare">Înființare Firme</NuxtLink></li>
-              <li><NuxtLink to="/servicii#analiza">Analiză Financiară</NuxtLink></li>
-              <li><NuxtLink to="/servicii#it">Consultanță IT</NuxtLink></li>
+              <li><NuxtLink to="/servicii#resurse-umane">Resurse Umane</NuxtLink></li>
+              <li><NuxtLink to="/servicii#expertiza">Expertiză Contabilă</NuxtLink></li>
             </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Verificare Eligibilitate</h4>
+            <CeccarBadge />
           </div>
         </div>
         <div class="footer-bottom">
@@ -153,5 +157,42 @@ onMounted(() => {
 
 .nav-menu a:hover {
   color: var(--primary-color);
+}
+
+/* Enhanced Logo Styling */
+.logo-text-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+}
+
+.logo-tagline {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  font-style: italic;
+  margin-top: 0.2rem;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .logo-text {
+    font-size: 1.2rem;
+  }
+
+  .logo-tagline {
+    font-size: 0.7rem;
+  }
 }
 </style>

@@ -99,82 +99,7 @@ function contactEmail() {
     window.location.href = mailtoURL;
 }
 
-// Handle Contact Form Submission
-function handleContactForm(e) {
-    e.preventDefault();
 
-    const formData = new FormData(e.target);
-    const data = Object.fromEntries(formData.entries());
-
-    // Here you would typically send the data to your backend
-    // For now, we'll create a mailto link with the form data
-    const subject = encodeURIComponent('Contact din site - ' + data.name || 'Vizitator');
-    const body = encodeURIComponent(
-        `Nume: ${data.name || 'N/A'}\n` +
-        `Email: ${data.email || 'N/A'}\n` +
-        `Telefon: ${data.phone || 'N/A'}\n\n` +
-        `Mesaj:\n${data.message || 'N/A'}`
-    );
-
-    // Show success message
-    alert('Mulțumim pentru mesaj! Vă vom contacta în cel mai scurt timp posibil.');
-
-    // Open email client
-    window.location.href = `mailto:${CONTACT_CONFIG.email}?subject=${subject}&body=${body}`;
-
-    // Reset form
-    e.target.reset();
-}
-
-// Load latest news for homepage
-function loadLatestNews() {
-    // Articles inline - aceleași ca în articles.js
-    const articles = [
-        {
-            "id": 1,
-            "title": "Modificări legislative în domeniul fiscal pentru 2025",
-            "category": "Fiscal",
-            "date": "2025-11-07",
-            "excerpt": "Aflați despre cele mai recente modificări ale Codului Fiscal care afectează afacerea dumneavoastră începând cu anul 2025. Aceste schimbări aduc noi oportunități, dar și responsabilități pentru contribuabili."
-        },
-        {
-            "id": 2,
-            "title": "Noi obligații de raportare pentru 2025",
-            "category": "Contabilitate",
-            "date": "2025-11-05",
-            "excerpt": "Informații esențiale despre noile cerințe de raportare fiscală ce intră în vigoare în noul an. Aflați ce declarații suplimentare trebuie depuse și care sunt termenele."
-        },
-        {
-            "id": 3,
-            "title": "Ghid complet TVA pentru comerțul electronic",
-            "category": "TVA",
-            "date": "2025-11-01",
-            "excerpt": "Tot ce trebuie să știți despre aplicarea TVA în comerțul online și vânzările transfrontaliere. Reguli actualizate pentru platformele de e-commerce și marketplace-uri."
-        }
-    ];
-
-    // Sort by date and get latest 3
-    const latestArticles = articles
-        .sort((a, b) => new Date(b.date) - new Date(a.date))
-        .slice(0, 3);
-
-    displayLatestNews(latestArticles);
-}
-
-// Display latest news on homepage
-function displayLatestNews(articles) {
-    const container = document.getElementById('latestNews');
-    if (!container) return;
-
-    container.innerHTML = articles.map(article => `
-        <div class="news-card">
-            <div class="news-date">${formatDate(article.date)}</div>
-            <h3>${article.title}</h3>
-            <p>${article.excerpt.substring(0, 120)}...</p>
-            <a href="legislatie.html" class="news-link">Citește mai mult →</a>
-        </div>
-    `).join('');
-}
 
 // Format date helper function
 function formatDate(dateString) {
@@ -264,32 +189,3 @@ window.addEventListener('scroll', function() {
     });
 });
 
-// Print function for articles (optional feature)
-function printArticle(articleId) {
-    window.print();
-}
-
-// Share article on social media (optional feature)
-function shareArticle(platform, articleTitle, articleUrl) {
-    let shareUrl = '';
-
-    switch(platform) {
-        case 'facebook':
-            shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(articleUrl)}`;
-            break;
-        case 'linkedin':
-            shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(articleUrl)}`;
-            break;
-        case 'twitter':
-            shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(articleUrl)}&text=${encodeURIComponent(articleTitle)}`;
-            break;
-    }
-
-    if (shareUrl) {
-        window.open(shareUrl, '_blank', 'width=600,height=400');
-    }
-}
-
-// Console message
-console.log('%c🚀 Accounting Business Expert Website', 'color: #1e40af; font-size: 16px; font-weight: bold;');
-console.log('%cDeveloped with ❤️ for professional accounting services', 'color: #6b7280; font-size: 12px;');

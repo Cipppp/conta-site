@@ -47,9 +47,9 @@
           </div>
           <div class="service-card">
             <div class="service-icon"><i class="fas fa-users"></i></div>
-            <h3>Salarizare & HR</h3>
+            <h3>Resurse umane</h3>
             <p>Servicii complete de personal: dosare, state de plată, declarații și contracte de muncă.</p>
-            <NuxtLink to="/servicii#salarizare" class="service-link">Detalii →</NuxtLink>
+            <NuxtLink to="/servicii#resurse-umane" class="service-link">Detalii →</NuxtLink>
           </div>
           <div class="service-card">
             <div class="service-icon"><i class="fas fa-building"></i></div>
@@ -129,7 +129,7 @@
         <div class="about-team">
           <h3>Echipa noastră</h3>
           <p>În prezent, SC Accounting Business Expert for Everyone SRL are <strong>5 salariați</strong> care formează o echipă tânără de profesioniști specializați în prestarea de servicii financiar-contabile prompte și de calitate, adaptate specificului fiecărui client.</p>
-          <p>Oferim servicii de consultanță fiscală, contabilitate generală și de personal-salarizare, care să se adapteze diverselor profile de activitate. Suntem dedicați clientului nostru și de aceea toată activitatea noastră este centrată să răspundă nevoilor acestuia. <strong>Afacerea noastră este bunul mers al afacerii clienților noștri.</strong></p>
+          <p>Oferim servicii de consultanță fiscală, contabilitate generală și de personal, care să se adapteze diverselor profile de activitate. Suntem dedicați clientului nostru și de aceea toată activitatea noastră este centrată să răspundă nevoilor acestuia. <strong>Afacerea noastră este bunul mers al afacerii clienților noștri.</strong></p>
         </div>
 
         <div class="about-values">
@@ -227,6 +227,35 @@
       </div>
     </section>
 
+    <!-- CECCAR Verification Section -->
+    <section class="ceccar-section">
+      <div class="container">
+        <div class="ceccar-content">
+          <div class="ceccar-intro">
+            <h2 class="section-title">Certificare și Acreditare</h2>
+            <p class="section-subtitle">Suntem membri verificați și autorizați ai Corpului Experților Contabili și Contabililor Autorizați din România</p>
+            <div class="ceccar-features">
+              <div class="feature-item">
+                <i class="fas fa-shield-alt"></i>
+                <span>Expertiză autorizată</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-certificate"></i>
+                <span>Certificare oficială</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Conformitate legislativă</span>
+              </div>
+            </div>
+          </div>
+          <div class="ceccar-badge-wrapper">
+            <CeccarBadge />
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Testimonials Section -->
     <section class="testimonials">
       <div class="container">
@@ -315,3 +344,118 @@ useHead({
   title: 'Accounting Business Expert - Servicii Contabilitate și Consultanță Fiscală',
 });
 </script>
+
+<style scoped>
+.ceccar-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  padding: 5rem 0;
+}
+
+.ceccar-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.ceccar-intro {
+  text-align: left;
+}
+
+.ceccar-intro .section-title {
+  margin-bottom: 1rem;
+}
+
+.ceccar-intro .section-subtitle {
+  color: #6c757d;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.ceccar-features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateX(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item i {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(0, 123, 255, 0.1), rgba(0, 86, 179, 0.1));
+  border-radius: 8px;
+}
+
+.feature-item span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.ceccar-badge-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 968px) {
+  .ceccar-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .ceccar-intro {
+    text-align: center;
+  }
+
+  .feature-item:hover {
+    transform: translateY(-4px);
+  }
+}
+
+@media (max-width: 768px) {
+  .ceccar-section {
+    padding: 3rem 0;
+  }
+
+  .ceccar-features {
+    gap: 1rem;
+  }
+
+  .feature-item {
+    padding: 0.75rem;
+  }
+
+  .feature-item i {
+    font-size: 1.25rem;
+    width: 36px;
+    height: 36px;
+  }
+
+  .feature-item span {
+    font-size: 0.9rem;
+  }
+}
+</style>
