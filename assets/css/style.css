@@ -77,6 +77,8 @@ body {
   position: relative;
   text-align: center;
   white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .logo-box h2 {

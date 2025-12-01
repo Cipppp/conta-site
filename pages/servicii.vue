@@ -333,18 +333,7 @@ const contactWhatsApp = () => {
   position: relative;
   color: white;
   text-align: center;
-  padding: 4rem 20px;
-}
-
-.services-hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1;
+  padding: 6rem 20px;
 }
 
 .services-hero .container {
@@ -355,13 +344,11 @@ const contactWhatsApp = () => {
 .services-hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .services-hero p {
   font-size: 1.25rem;
   opacity: 0.9;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .services-detail {

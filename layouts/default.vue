@@ -3,12 +3,12 @@
     <!-- Header -->
     <header class="header">
       <nav class="nav-container">
-        <div class="logo-box">
+        <NuxtLink to="/" class="logo-box">
           <div class="logo-text-wrapper">
             <h2 class="logo-text">Accounting Business Expert</h2>
             <span class="logo-tagline">for Everyone</span>
           </div>
-        </div>
+        </NuxtLink>
         <ul class="nav-menu" id="navMenu">
           <li><NuxtLink to="/" :class="{ active: $route.path === '/' }">Acasă</NuxtLink></li>
           <li><NuxtLink to="/servicii" :class="{ active: $route.path === '/servicii' }">Servicii</NuxtLink></li>
@@ -168,10 +168,7 @@ onMounted(() => {
 .logo-text {
   font-size: 1.5rem;
   font-weight: 700;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--primary-color);
   margin: 0;
   line-height: 1.3;
   letter-spacing: -0.5px;
@@ -180,8 +177,8 @@ onMounted(() => {
 .logo-tagline {
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--secondary-color);
-  font-style: italic;
+  color: var(--primary-color);
+  font-style: normal;
   margin-top: 0.2rem;
   letter-spacing: 0.5px;
 }

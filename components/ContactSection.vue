@@ -13,8 +13,8 @@
           </div>
           <h3>Telefon</h3>
           <p>
-            <a href="tel:+40762205999">+40 762 205 999</a><br>
-            <a href="tel:+40344802302">+40 344 802 302</a>
+            <a href="tel:+40762205999">+40 766 333 433</a><br>
+            <a href="tel:+40344802302">+40 764 218 182</a>
           </p>
         </div>
 
@@ -23,7 +23,7 @@
             <i class="fas fa-mobile-alt"></i>
           </div>
           <h3>Mobil / WhatsApp</h3>
-          <p><a href="tel:+40766333433">+40 766 333 433</a></p>
+          <p><a href="tel:+40766333433">+40 767 019 025</a></p>
           <button class="whatsapp-btn" @click="contactWhatsApp">
             <i class="fab fa-whatsapp"></i> WhatsApp
           </button>
