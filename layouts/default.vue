@@ -14,10 +14,13 @@
           <li><NuxtLink to="/servicii" :class="{ active: $route.path === '/servicii' }">Servicii</NuxtLink></li>
           <li><NuxtLink to="/calculator" :class="{ active: $route.path === '/calculator' }">Calculator taxe</NuxtLink></li>
         </ul>
-        <div class="hamburger" id="hamburger" @click="toggleMenu">
-          <span></span>
-          <span></span>
-          <span></span>
+        <div class="nav-actions">
+          <ShoppingCart />
+          <div class="hamburger" id="hamburger" @click="toggleMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </nav>
     </header>
@@ -191,5 +194,13 @@ onMounted(() => {
   .logo-tagline {
     font-size: 0.7rem;
   }
+}
+
+/* Nav Actions (cart + hamburger) */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-left: 2rem;
 }
 </style>

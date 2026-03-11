@@ -59,7 +59,6 @@ body {
     margin: 0 auto;
     padding: 1rem 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -96,6 +95,7 @@ body {
     display: flex;
     list-style: none;
     gap: 2rem;
+    margin-left: auto;
 }
 
 .nav-menu a {

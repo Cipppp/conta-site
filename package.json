@@ -11,6 +11,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "nodemailer": "^8.0.2",
     "nuxt": "^3.14.0",
     "vue": "latest",
     "vue-router": "latest"

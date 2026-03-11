@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  
+
   app: {
     head: {
       charset: 'utf-8',
@@ -15,5 +15,14 @@ export default defineNuxtConfig({
     }
   },
 
-  css: ['~/assets/css/style.css']
+  css: ['~/assets/css/style.css'],
+
+  runtimeConfig: {
+    smtpHost: process.env.SMTP_HOST || '',
+    smtpPort: process.env.SMTP_PORT || '587',
+    smtpUser: process.env.SMTP_USER || '',
+    smtpPass: process.env.SMTP_PASS || '',
+    smtpFrom: process.env.SMTP_FROM || '',
+    orderEmail: process.env.ORDER_EMAIL || 'loredobre@gmail.com'
+  }
 })
