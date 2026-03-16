@@ -61,21 +61,8 @@ const verifyEligibility = async () => {
   isLoading.value = true;
 
   try {
-    const response = await $fetch('https://raportare.ceccar.ro/api/search', {
+    const response = await $fetch('/api/ceccar-search', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/ld+json',
-        'Accept': 'application/ld+json',
-      },
-      body: {
-        page: 1,
-        membersType: "companies",
-        memberLastName: "Accounting business expert for everyone SRL",
-        memberFirstName: "",
-        memberRegNumber: "",
-        memberCurrentYearVisa: null,
-        memberRegion: null
-      }
     });
 
     if (response.responseType === 'success' && response.pager?.items?.length > 0) {
