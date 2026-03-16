@@ -85,6 +85,15 @@
                   placeholder="email@exemplu.ro"
                 >
               </div>
+              <div class="cart-form-group">
+                <label for="cart-phone">Telefon</label>
+                <input
+                  id="cart-phone"
+                  type="tel"
+                  v-model="phone"
+                  placeholder="07xx xxx xxx"
+                >
+              </div>
               <p v-if="error" class="cart-error">{{ error }}</p>
               <button
                 type="submit"
@@ -177,7 +186,8 @@ const submitOrder = async () => {
       method: 'POST',
       body: {
         services: selectedServiceNames,
-        email: email.value
+        email: email.value,
+        phone: phone.value
       }
     })
 
