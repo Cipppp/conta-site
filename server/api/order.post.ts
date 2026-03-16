@@ -2,7 +2,7 @@ import nodemailer from 'nodemailer'
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)
-  const { services, email } = body
+  const { services, email, phone } = body
 
   if (!services?.length || !email) {
     throw createError({
@@ -52,7 +52,7 @@ export default defineEventHandler(async (event) => {
       to: config.orderEmail || 'office@accountingbusiness.ro',
       replyTo: email,
       subject: `Comandă nouă - ${services.join(', ')}`,
-      text: `O nouă comandă a fost primită:\n\nServicii solicitate:\n${servicesList}\n\nDate de contact client:\nEmail: ${email}\n\nData: ${dateStr}`,
+      text: `O nouă comandă a fost primită:\n\nServicii solicitate:\n${servicesList}\n\nDate de contact client:\nEmail: ${email}${phone ? `\nTelefon: ${phone}` : ''}\n\nData: ${dateStr}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
           <div style="background: linear-gradient(135deg, #1e40af, #3b82f6); padding: 20px; border-radius: 10px 10px 0 0;">
@@ -64,6 +64,7 @@ export default defineEventHandler(async (event) => {
             <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 20px 0;">
             <h3 style="color: #1e40af;">Date de contact client:</h3>
             <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
+            ${phone ? `<p><strong>Telefon:</strong> <a href="tel:${phone}">${phone}</a></p>` : ''}
             <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 20px 0;">
             <p style="color: #6b7280; font-size: 0.85em;">Comandă primită la: ${dateStr}</p>
           </div>
