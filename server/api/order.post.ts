@@ -23,12 +23,16 @@ export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
 
   const transporter = nodemailer.createTransport({
-    host: config.smtpHost,
+    host: config.smtpHost || 'smtp.gmail.com',
     port: parseInt(config.smtpPort as string) || 587,
-    secure: config.smtpPort === '465',
+    secure: false, // use STARTTLS on port 587
+    requireTLS: true,
     auth: {
       user: config.smtpUser,
       pass: config.smtpPass
+    },
+    tls: {
+      rejectUnauthorized: false
     }
   })
 
