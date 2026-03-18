@@ -1,4 +1,5 @@
 import nodemailer from 'nodemailer'
+import { saveOrder } from '../utils/db'
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)
@@ -46,6 +47,19 @@ export default defineEventHandler(async (event) => {
     minute: '2-digit'
   })
 
+  // Save order to database
+  try {
+    await saveOrder({
+      date: dateStr,
+      email,
+      phone: phone || '',
+      services
+    })
+  } catch (err) {
+    console.error('Database save failed:', err)
+  }
+
+  // Send email notification
   try {
     await transporter.sendMail({
       from: config.smtpFrom || config.smtpUser,
@@ -73,7 +87,6 @@ export default defineEventHandler(async (event) => {
     })
   } catch (err) {
     console.error('Email sending failed:', err)
-    // Comanda se acceptă oricum, emailul se va retrimite manual dacă e nevoie
   }
 
   return { success: true }
