@@ -23,7 +23,7 @@
             <i class="fas fa-mobile-alt"></i>
           </div>
           <h3>Mobil / WhatsApp</h3>
-          <p><a href="tel:+40766333433">+40 767 019 025</a></p>
+          <p><a href="tel:+40766333433">+40 766 333 433</a></p>
           <button class="whatsapp-btn" @click="contactWhatsApp">
             <i class="fab fa-whatsapp"></i> WhatsApp
           </button>
@@ -35,9 +35,9 @@
           </div>
           <h3>Email</h3>
           <p>
-            <a href="mailto:loredana@analizaserv.ro">loredana@analizaserv.ro</a><br>
-            <a href="mailto:loredobre@gmail.com">loredobre@gmail.com</a><br>
-            <a href="mailto:loredobre@yahoo.com">loredobre@yahoo.com</a>
+            <a href="mailto:loredana@accountingbusiness.ro">loredana@accountingbusiness.ro</a><br>
+            <a href="mailto:office@accountingbusiness.ro">office@accountingbusiness.ro</a><br>
+            <a href="mailto:office@accountingbusiness.ro">office@accountingbusiness.ro</a>
           </p>
         </div>
       </div>
