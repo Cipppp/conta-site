@@ -3,7 +3,7 @@
 // Configuration - IMPORTANT: Update these with your actual contact details
 const CONTACT_CONFIG = {
     phone: '+40766333433',  // WhatsApp mobile number
-    email: 'loredana@analizaserv.ro',  // Primary email
+    email: 'loredana@accountingbusiness.ro',  // Primary email
     whatsappMessage: 'Bună! Aș dori să aflu mai multe despre serviciile dumneavoastră de contabilitate.'
 };
 

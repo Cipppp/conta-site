@@ -23,7 +23,7 @@ export default defineNuxtConfig({
     smtpUser: process.env.SMTP_USER || '',
     smtpPass: process.env.SMTP_PASS || '',
     smtpFrom: process.env.SMTP_FROM || '',
-    orderEmail: process.env.ORDER_EMAIL || 'loredobre@gmail.com',
+    orderEmail: process.env.ORDER_EMAIL || 'office@accountingbusiness.ro',
     adminPassword: process.env.ADMIN_PASSWORD || '',
     tursoUrl: process.env.TURSO_URL || '',
     tursoAuthToken: process.env.TURSO_AUTH_TOKEN || ''
