@@ -150,17 +150,13 @@ const contactWhatsApp = () => {
   color: var(--primary-color);
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.9rem;
-  padding: 0.5rem 1rem;
-  background: #f0f4ff;
-  border-radius: 8px;
-  transition: all 0.3s;
-  word-break: break-all;
+  font-size: 0.85rem;
+  transition: color 0.3s;
+  line-height: 1.6;
 }
 
 .email-links a:hover {
-  background: var(--primary-color);
-  color: white;
+  color: var(--secondary-color);
 }
 
 .whatsapp-btn {
