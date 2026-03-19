@@ -43,7 +43,6 @@
               Ploiești, Prahova<br>
               Tel: <a href="tel:+40766333433">+40 766 333 433</a><br>
               Tel: <a href="tel:+40764218182">+40 764 218 182</a><br>
-              Tel: <a href="tel:+40766333433">+40 766 333 433</a><br>
               Email: <a href="mailto:office@accountingbusiness.ro">office@accountingbusiness.ro</a><br>
               Email: <a href="mailto:loredana@accountingbusiness.ro">loredana@accountingbusiness.ro</a>
             </p>
