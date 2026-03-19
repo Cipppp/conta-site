@@ -34,11 +34,10 @@
             <i class="fas fa-envelope"></i>
           </div>
           <h3>Email</h3>
-          <p>
-            <a href="mailto:loredana@accountingbusiness.ro">loredana@accountingbusiness.ro</a><br>
-            <a href="mailto:office@accountingbusiness.ro">office@accountingbusiness.ro</a><br>
+          <div class="email-links">
+            <a href="mailto:loredana@accountingbusiness.ro">loredana@accountingbusiness.ro</a>
             <a href="mailto:office@accountingbusiness.ro">office@accountingbusiness.ro</a>
-          </p>
+          </div>
         </div>
       </div>
     </div>
@@ -138,6 +137,30 @@ const contactWhatsApp = () => {
 
 .contact-card a:hover {
   color: var(--secondary-color);
+}
+
+.email-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.email-links a {
+  display: block;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  background: #f0f4ff;
+  border-radius: 8px;
+  transition: all 0.3s;
+  word-break: break-all;
+}
+
+.email-links a:hover {
+  background: var(--primary-color);
+  color: white;
 }
 
 .whatsapp-btn {
