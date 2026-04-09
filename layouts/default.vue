@@ -5,15 +5,15 @@
       <div class="pnrr-banner-inner">
         <div class="pnrr-logos">
           <a href="https://next-generation-eu.europa.eu" target="_blank" rel="noopener noreferrer" class="pnrr-logo-link">
-            <img src="/images/pnrr/eu-funded.svg" alt="Finanțat de Uniunea Europeană NextGenerationEU" class="pnrr-logo-img pnrr-logo-eu" />
+            <img src="/images/pnrr/eu-funded.png" alt="Finanțat de Uniunea Europeană NextGenerationEU" class="pnrr-logo-img pnrr-logo-eu" />
           </a>
           <span class="pnrr-separator"></span>
           <a href="https://gov.ro" target="_blank" rel="noopener noreferrer" class="pnrr-logo-link">
-            <img src="/images/pnrr/gov-romania.svg" alt="Guvernul României" class="pnrr-logo-img pnrr-logo-gov" />
+            <img src="/images/pnrr/gov-romania.png" alt="Guvernul României" class="pnrr-logo-img pnrr-logo-gov" />
           </a>
           <span class="pnrr-separator"></span>
           <a href="https://mfe.gov.ro/pnrr/" target="_blank" rel="noopener noreferrer" class="pnrr-logo-link">
-            <img src="/images/pnrr/pnrr-logo.svg" alt="PNRR - Planul Național de Redresare și Reziliență" class="pnrr-logo-img pnrr-logo-pnrr" />
+            <img src="/images/pnrr/pnrr-logo.png" alt="PNRR - Planul Național de Redresare și Reziliență" class="pnrr-logo-img pnrr-logo-pnrr" />
           </a>
         </div>
       </div>
