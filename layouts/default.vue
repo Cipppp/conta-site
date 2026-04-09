@@ -1,5 +1,24 @@
 <template>
   <div>
+    <!-- PNRR Institutional Banner -->
+    <div class="pnrr-banner">
+      <div class="pnrr-banner-inner">
+        <div class="pnrr-logos">
+          <a href="https://next-generation-eu.europa.eu" target="_blank" rel="noopener noreferrer" class="pnrr-logo-link">
+            <img src="/images/pnrr/eu-funded.svg" alt="Finanțat de Uniunea Europeană NextGenerationEU" class="pnrr-logo-img pnrr-logo-eu" />
+          </a>
+          <span class="pnrr-separator"></span>
+          <a href="https://gov.ro" target="_blank" rel="noopener noreferrer" class="pnrr-logo-link">
+            <img src="/images/pnrr/gov-romania.svg" alt="Guvernul României" class="pnrr-logo-img pnrr-logo-gov" />
+          </a>
+          <span class="pnrr-separator"></span>
+          <a href="https://mfe.gov.ro/pnrr/" target="_blank" rel="noopener noreferrer" class="pnrr-logo-link">
+            <img src="/images/pnrr/pnrr-logo.svg" alt="PNRR - Planul Național de Redresare și Reziliență" class="pnrr-logo-img pnrr-logo-pnrr" />
+          </a>
+        </div>
+      </div>
+    </div>
+
     <!-- Header -->
     <header class="header">
       <nav class="nav-container">
@@ -67,6 +86,20 @@
             <CeccarBadge />
           </div>
         </div>
+        <!-- PNRR Footer Section -->
+        <div class="pnrr-footer">
+          <p class="pnrr-footer-slogan">PNRR. Finanțat de Uniunea Europeană – UrmătoareaGenerațieUE</p>
+          <p class="pnrr-footer-disclaimer">Conținutul acestui material nu reprezintă în mod obligatoriu poziția oficială a Uniunii Europene sau a Guvernului României.</p>
+          <div class="pnrr-footer-links">
+            <a href="https://mfe.gov.ro/pnrr/" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-external-link-alt"></i> mfe.gov.ro/pnrr
+            </a>
+            <a href="https://www.facebook.com/PNRROficial" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-facebook"></i> PNRR Oficial pe Facebook
+            </a>
+          </div>
+        </div>
+
         <div class="footer-bottom">
           <p>&copy; 2025 Accounting Business Expert for Everyone SRL. Toate drepturile rezervate.</p>
         </div>
@@ -201,5 +234,195 @@ onMounted(() => {
   align-items: center;
   gap: 0.75rem;
   margin-left: 2rem;
+}
+
+/* ===== PNRR Top Banner ===== */
+.pnrr-banner {
+  background: #ffffff;
+  border-bottom: 2px solid #003399;
+  padding: 0.625rem 20px;
+  width: 100%;
+  z-index: 1001;
+}
+
+.pnrr-banner-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pnrr-logos {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pnrr-logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.pnrr-logo-link:hover {
+  opacity: 0.8;
+}
+
+.pnrr-logo-img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.pnrr-logo-eu {
+  height: 50px;
+}
+
+.pnrr-logo-gov {
+  height: 48px;
+}
+
+.pnrr-logo-pnrr {
+  height: 48px;
+}
+
+.pnrr-separator {
+  width: 1px;
+  height: 36px;
+  background: #d1d5db;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .pnrr-banner {
+    padding: 0.5rem 15px;
+  }
+
+  .pnrr-logos {
+    gap: 0.75rem;
+  }
+
+  .pnrr-logo-img {
+    height: 36px;
+  }
+
+  .pnrr-logo-eu {
+    height: 36px;
+  }
+
+  .pnrr-logo-gov {
+    height: 34px;
+  }
+
+  .pnrr-logo-pnrr {
+    height: 34px;
+  }
+
+  .pnrr-separator {
+    height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pnrr-logos {
+    gap: 0.5rem;
+  }
+
+  .pnrr-logo-img {
+    height: 28px;
+  }
+
+  .pnrr-logo-eu {
+    height: 28px;
+  }
+
+  .pnrr-logo-gov {
+    height: 26px;
+  }
+
+  .pnrr-logo-pnrr {
+    height: 26px;
+  }
+
+  .pnrr-separator {
+    height: 22px;
+  }
+}
+
+/* ===== PNRR Footer Section ===== */
+.pnrr-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 1.5rem 0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.pnrr-footer-slogan {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.3px;
+}
+
+.pnrr-footer-disclaimer {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.825rem;
+  line-height: 1.5;
+  max-width: 700px;
+  margin: 0 auto 1rem;
+  font-style: italic;
+}
+
+.pnrr-footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.pnrr-footer-links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s;
+}
+
+.pnrr-footer-links a:hover {
+  color: #ffffff;
+}
+
+.pnrr-footer-links a i {
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .pnrr-footer {
+    padding: 1.25rem 0;
+  }
+
+  .pnrr-footer-slogan {
+    font-size: 0.9rem;
+  }
+
+  .pnrr-footer-disclaimer {
+    font-size: 0.775rem;
+    padding: 0 1rem;
+  }
+
+  .pnrr-footer-links {
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 </style>
