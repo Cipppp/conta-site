@@ -240,7 +240,7 @@ onMounted(() => {
 .pnrr-banner {
   background: #ffffff;
   border-bottom: 2px solid #003399;
-  padding: 0.625rem 20px;
+  padding: 0.875rem 20px;
   width: 100%;
   z-index: 1001;
 }
@@ -273,26 +273,26 @@ onMounted(() => {
 }
 
 .pnrr-logo-img {
-  height: 50px;
+  height: 72px;
   width: auto;
   object-fit: contain;
 }
 
 .pnrr-logo-eu {
-  height: 50px;
+  height: 72px;
 }
 
 .pnrr-logo-gov {
-  height: 48px;
+  height: 68px;
 }
 
 .pnrr-logo-pnrr {
-  height: 48px;
+  height: 68px;
 }
 
 .pnrr-separator {
   width: 1px;
-  height: 36px;
+  height: 48px;
   background: #d1d5db;
   flex-shrink: 0;
 }
@@ -307,23 +307,23 @@ onMounted(() => {
   }
 
   .pnrr-logo-img {
-    height: 36px;
+    height: 48px;
   }
 
   .pnrr-logo-eu {
-    height: 36px;
+    height: 48px;
   }
 
   .pnrr-logo-gov {
-    height: 34px;
+    height: 44px;
   }
 
   .pnrr-logo-pnrr {
-    height: 34px;
+    height: 44px;
   }
 
   .pnrr-separator {
-    height: 28px;
+    height: 36px;
   }
 }
 
@@ -333,23 +333,23 @@ onMounted(() => {
   }
 
   .pnrr-logo-img {
-    height: 28px;
+    height: 36px;
   }
 
   .pnrr-logo-eu {
-    height: 28px;
+    height: 36px;
   }
 
   .pnrr-logo-gov {
-    height: 26px;
+    height: 34px;
   }
 
   .pnrr-logo-pnrr {
-    height: 26px;
+    height: 34px;
   }
 
   .pnrr-separator {
-    height: 22px;
+    height: 28px;
   }
 }
 
