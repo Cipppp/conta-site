@@ -121,12 +121,40 @@
 </template>
 
 <script setup>
-const { contact } = useAppConfig();
+const { site, contact } = useAppConfig();
 const route = useRoute();
 
 const year = new Date().getFullYear();
 const isAdmin = computed(() => route.path.startsWith('/admin'));
 const whatsappUrl = `https://wa.me/${contact.whatsapp.tel.replace('+', '')}?text=${encodeURIComponent('Bună! Aș dori să aflu mai multe despre serviciile dumneavoastră de contabilitate.')}`;
+
+const pageUrl = computed(() => site.url + (route.path === '/' ? '/' : route.path.replace(/\/$/, '')));
+
+useHead({
+  link: [{ rel: 'canonical', href: pageUrl }],
+  meta: [{ property: 'og:url', content: pageUrl }],
+  script: [{
+    type: 'application/ld+json',
+    innerHTML: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'AccountingService',
+      name: site.name,
+      legalName: site.legalName,
+      taxID: site.cui,
+      url: site.url,
+      telephone: contact.phones.map(p => p.tel),
+      email: contact.emails,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: contact.address.street,
+        addressLocality: contact.address.city,
+        addressRegion: contact.address.county,
+        addressCountry: 'RO'
+      },
+      areaServed: { '@type': 'AdministrativeArea', name: 'Prahova' }
+    })
+  }]
+});
 
 const toggleMenu = () => {
   if (process.client) {

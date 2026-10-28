@@ -403,8 +403,12 @@
 <script setup>
 import { ref, computed } from 'vue';
 
-useHead({
+const description = 'Calculator gratuit pentru taxele unui PFA sau ale unui SRL micro-întreprindere: impozit, CAS, CASS și dividende. Rezultat orientativ, în câteva secunde.';
+
+useSeoMeta({
   title: 'Calculator taxe PFA și SRL 2025 - Accounting Business Expert',
+  description,
+  ogDescription: description,
 });
 
 // Entity type

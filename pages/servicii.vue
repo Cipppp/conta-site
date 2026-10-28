@@ -313,8 +313,13 @@
 </template>
 
 <script setup>
-useHead({
+const description = 'Contabilitate generală, consultanță fiscală, resurse umane și salarizare, expertiză contabilă, certificare bilanțuri, înființare și lichidare firme în Ploiești, Prahova.';
+
+useSeoMeta({
   title: 'Servicii Contabilitate - Accounting Business Expert',
+  ogTitle: 'Servicii de contabilitate și consultanță fiscală - Accounting Business Expert',
+  description,
+  ogDescription: description,
 });
 
 const contactWhatsApp = () => {

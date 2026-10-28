@@ -84,6 +84,8 @@
 </template>
 
 <script setup>
+useSeoMeta({ robots: 'noindex, nofollow' })
+
 const password = ref('')
 const token = ref('')
 const authenticated = ref(false)

@@ -6,6 +6,16 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
+      htmlAttrs: { lang: 'ro' },
+      meta: [
+        { property: 'og:type', content: 'website' },
+        { property: 'og:locale', content: 'ro_RO' },
+        { property: 'og:site_name', content: 'Accounting Business Expert' },
+        { property: 'og:image', content: 'https://www.accountingbusiness.ro/images/og-cover.jpg' },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
+        { name: 'twitter:card', content: 'summary_large_image' }
+      ],
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },

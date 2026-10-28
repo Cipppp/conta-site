@@ -340,8 +340,13 @@
 </template>
 
 <script setup>
-useHead({
+const description = 'Contabilitate, consultanță fiscală, salarizare și înființare firme în Ploiești, Prahova. Firmă înregistrată la CECCAR, cu peste 23 de ani de experiență.';
+
+useSeoMeta({
   title: 'Accounting Business Expert - Servicii Contabilitate și Consultanță Fiscală',
+  ogTitle: 'Accounting Business Expert - Contabilitate și consultanță fiscală în Ploiești',
+  description,
+  ogDescription: description,
 });
 </script>
 
