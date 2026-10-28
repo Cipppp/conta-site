@@ -103,7 +103,7 @@
         </div>
 
         <div class="footer-bottom">
-          <p>&copy; 2025 Accounting Business Expert for Everyone SRL. Toate drepturile rezervate.</p>
+          <p>&copy; {{ year }} Accounting Business Expert for Everyone SRL. Toate drepturile rezervate.</p>
         </div>
       </div>
     </footer>
@@ -112,6 +112,8 @@
 
 <script setup>
 const { contact } = useAppConfig();
+
+const year = new Date().getFullYear();
 
 const toggleMenu = () => {
   if (process.client) {
