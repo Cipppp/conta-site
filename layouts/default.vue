@@ -58,12 +58,14 @@
             <p>Înregistrat la CECCAR - Filiala Prahova</p>
             <p style="margin-top: 1.5rem;">
               <strong>Contact:</strong><br>
-              Str. Tudor Vladimirescu, nr. 95<br>
-              Ploiești, Prahova<br>
-              Tel: <a href="tel:+40766333433">+40 766 333 433</a><br>
-              Tel: <a href="tel:+40764218182">+40 764 218 182</a><br>
-              Email: <a href="mailto:office@accountingbusiness.ro">office@accountingbusiness.ro</a><br>
-              Email: <a href="mailto:loredana@accountingbusiness.ro">loredana@accountingbusiness.ro</a>
+              {{ contact.address.street }}<br>
+              {{ contact.address.city }}, {{ contact.address.county }}<br>
+              <template v-for="phone in contact.phones" :key="phone.tel">
+                Tel: <a :href="`tel:${phone.tel}`">{{ phone.display }}</a><br>
+              </template>
+              <template v-for="(email, i) in contact.emails" :key="email">
+                <br v-if="i > 0">Email: <a :href="`mailto:${email}`">{{ email }}</a>
+              </template>
             </p>
           </div>
           <div class="footer-section">
@@ -109,6 +111,8 @@
 </template>
 
 <script setup>
+const { contact } = useAppConfig();
+
 const toggleMenu = () => {
   if (process.client) {
     const navMenu = document.getElementById('navMenu');

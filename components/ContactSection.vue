@@ -13,8 +13,10 @@
           </div>
           <h3>Telefon</h3>
           <p>
-            <a href="tel:+40762205999">+40 766 333 433</a><br>
-            <a href="tel:+40344802302">+40 764 218 182</a>
+            <template v-for="(phone, i) in contact.phones" :key="phone.tel">
+              <br v-if="i > 0">
+              <a :href="`tel:${phone.tel}`">{{ phone.display }}</a>
+            </template>
           </p>
         </div>
 
@@ -23,7 +25,7 @@
             <i class="fas fa-mobile-alt"></i>
           </div>
           <h3>Mobil / WhatsApp</h3>
-          <p><a href="tel:+40766333433">+40 766 333 433</a></p>
+          <p><a :href="`tel:${contact.whatsapp.tel}`">{{ contact.whatsapp.display }}</a></p>
           <button class="whatsapp-btn" @click="contactWhatsApp">
             <i class="fab fa-whatsapp"></i> WhatsApp
           </button>
@@ -35,8 +37,7 @@
           </div>
           <h3>Email</h3>
           <div class="email-links">
-            <a href="mailto:loredana@accountingbusiness.ro">loredana@accountingbusiness.ro</a>
-            <a href="mailto:office@accountingbusiness.ro">office@accountingbusiness.ro</a>
+            <a v-for="email in contact.emails" :key="email" :href="`mailto:${email}`">{{ email }}</a>
           </div>
         </div>
       </div>
@@ -45,6 +46,8 @@
 </template>
 
 <script setup>
+const { contact } = useAppConfig();
+
 const contactWhatsApp = () => {
   if (process.client && typeof window.contactWhatsApp === 'function') {
     window.contactWhatsApp();
