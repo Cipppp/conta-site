@@ -107,13 +107,26 @@
         </div>
       </div>
     </footer>
+
+    <!-- Call / WhatsApp bar, phones only -->
+    <div v-if="!isAdmin" class="mobile-contact-bar">
+      <a :href="`tel:${contact.phones[0].tel}`" class="mobile-contact-call">
+        <i class="fas fa-phone-alt"></i> Sună
+      </a>
+      <a :href="whatsappUrl" target="_blank" rel="noopener" class="mobile-contact-whatsapp">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+    </div>
   </div>
 </template>
 
 <script setup>
 const { contact } = useAppConfig();
+const route = useRoute();
 
 const year = new Date().getFullYear();
+const isAdmin = computed(() => route.path.startsWith('/admin'));
+const whatsappUrl = `https://wa.me/${contact.whatsapp.tel.replace('+', '')}?text=${encodeURIComponent('Bună! Aș dori să aflu mai multe despre serviciile dumneavoastră de contabilitate.')}`;
 
 const toggleMenu = () => {
   if (process.client) {
@@ -429,6 +442,52 @@ onMounted(() => {
     gap: 1rem;
     flex-direction: column;
     align-items: center;
+  }
+}
+
+/* Call / WhatsApp bar: phones only, sits under the cart panel (z-index 1100) */
+.mobile-contact-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-contact-bar {
+    display: flex;
+    gap: 0.5rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1050;
+    padding: 0.6rem 0.75rem calc(0.6rem + env(safe-area-inset-bottom));
+    background: var(--background);
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .mobile-contact-bar a {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .mobile-contact-call {
+    background: var(--primary-color);
+  }
+
+  .mobile-contact-whatsapp {
+    background: #25d366;
+  }
+
+  /* keep the footer's last line clear of the bar */
+  .footer {
+    padding-bottom: calc(4.5rem + env(safe-area-inset-bottom));
   }
 }
 </style>
