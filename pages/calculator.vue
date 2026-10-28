@@ -3,7 +3,7 @@
     <!-- Hero Section -->
     <section class="calculator-hero">
       <div class="container">
-        <h1>Calculator taxe PFA și SRL 2025</h1>
+        <h1>Calculator taxe PFA și SRL 2026</h1>
         <p>Calculează rapid taxele și impozitele pe care trebuie să le plătești în funcție de forma de organizare și venitul tău</p>
       </div>
     </section>
@@ -33,7 +33,7 @@
         <div class="calculator-content">
           <!-- PFA Calculator -->
           <div v-if="entityType === 'pfa'" class="calculator-form">
-            <h2>Calculator PFA - Venituri și taxe 2025</h2>
+            <h2>Calculator PFA - Venituri și taxe 2026</h2>
 
             <div class="form-group">
               <label for="pfa-income">
@@ -163,7 +163,7 @@
 
           <!-- SRL Calculator -->
           <div v-else class="calculator-form">
-            <h2>Calculator SRL - micro-întreprindere 2025</h2>
+            <h2>Calculator SRL - micro-întreprindere 2026</h2>
 
             <div class="form-group">
               <label for="srl-income">
@@ -214,11 +214,8 @@
                 <i class="fas fa-percentage"></i>
                 Cota impozit pe venit
               </label>
-              <select id="srl-cota" v-model.number="srlImpozitCota" style="width: 100%; padding: 0.875rem 1rem; border: 2px solid var(--border-color); border-radius: 8px; font-size: 1rem; font-family: inherit;">
-                <option :value="1">1% (IT, producție, construcții)</option>
-                <option :value="3">3% (alte domenii)</option>
-              </select>
-              <small>Micro-întreprindere - cifră de afaceri sub 500.000 €</small>
+              <input type="text" id="srl-cota" value="1% din cifra de afaceri" readonly />
+              <small>Cotă unică din 2026, pentru venituri sub 100.000 €. Peste plafon se trece la impozit pe profit de 16%.</small>
             </div>
 
             <!-- Results SRL -->
@@ -303,7 +300,7 @@
 
                 <div class="result-item">
                   <span class="result-label">
-                    Impozit pe dividende (10%)
+                    Impozit pe dividende (16%)
                   </span>
                   <span class="result-value deduction">- {{ formatCurrency(srlCalculations.taxaDividende) }}</span>
                 </div>
@@ -353,20 +350,21 @@
             <i class="fas fa-info-circle"></i>
             <div>
               <h4>Notă importantă</h4>
-              <p>Calculele sunt orientative și bazate pe legislația fiscală 2025. Pentru sfaturi personalizate și optimizare fiscală, contactează-ne pentru o consultanță gratuită!</p>
+              <p>Calculele sunt orientative și bazate pe legislația fiscală 2026. Pentru sfaturi personalizate și optimizare fiscală, contactează-ne pentru o consultanță gratuită!</p>
             </div>
           </div>
 
           <div class="note-card warning">
             <i class="fas fa-exclamation-triangle"></i>
             <div>
-              <h4>Legislație 2025</h4>
+              <h4>Legislație 2026</h4>
               <ul>
+                <li><strong>Salariul minim:</strong> pragurile pentru veniturile din 2026 folosesc 4.050 lei, salariul minim în vigoare la 1 ianuarie 2026.</li>
                 <li><strong>PFA - CAS (25%):</strong> Sub 48.600 lei/an - opțional | 48.600-97.200 lei/an - 12.150 lei/an | Peste 97.200 lei/an - 24.300 lei/an</li>
-                <li><strong>PFA - CASS (10%):</strong> Dacă salariat - 10% fără minim | Dacă NU salariat - Sub 24.300 lei/an: 2.430 lei/an | 24.300-243.000 lei/an: 10% din venit net | Peste 243.000 lei/an: 24.300 lei/an</li>
+                <li><strong>PFA - CASS (10%):</strong> Dacă salariat - 10% fără minim | Dacă NU salariat - Sub 24.300 lei/an: 2.430 lei/an | 24.300-291.600 lei/an: 10% din venit net | Peste 291.600 lei/an: 29.160 lei/an</li>
                 <li><strong>PFA - Impozit:</strong> 10% pe (venit net − CAS − CASS)</li>
-                <li><strong>SRL Micro-întreprindere:</strong> Impozit pe venituri (1% IT/producție/construcții, 3% alte domenii). Obligatoriu 1 angajat.</li>
-                <li><strong>Dividende SRL:</strong> Impozit 10% + CASS pe dividendele nete: sub 24.300 lei/an - nimic | 24.300-48.600 lei/an - 2.430 lei/an | 48.600-97.200 lei/an - 4.860 lei/an | Peste 97.200 lei/an - 9.720 lei/an. Se datorează și dacă proprietarul este salariat.</li>
+                <li><strong>SRL Micro-întreprindere:</strong> Impozit 1% pe venituri, pentru venituri sub 100.000 €. Obligatoriu 1 angajat. Peste plafon: impozit pe profit 16%.</li>
+                <li><strong>Dividende SRL:</strong> Impozit 16% + CASS pe dividendele nete: sub 24.300 lei/an - nimic | 24.300-48.600 lei/an - 2.430 lei/an | 48.600-97.200 lei/an - 4.860 lei/an | Peste 97.200 lei/an - 9.720 lei/an. Se datorează și dacă proprietarul este salariat.</li>
               </ul>
             </div>
           </div>
@@ -395,7 +393,7 @@ import { ref, computed } from 'vue';
 const description = 'Calculator gratuit pentru taxele unui PFA sau ale unui SRL micro-întreprindere: impozit, CAS, CASS și dividende. Rezultat orientativ, în câteva secunde.';
 
 useSeoMeta({
-  title: 'Calculator taxe PFA și SRL 2025 - Accounting Business Expert',
+  title: 'Calculator taxe PFA și SRL 2026 - Accounting Business Expert',
   description,
   ogDescription: description,
 });
@@ -413,7 +411,7 @@ const pfaSalariat = ref(false);
 const srlIncome = ref(10000);
 const srlExpenses = ref(4000);
 const srlSalary = ref(3000);
-const srlImpozitCota = ref(3); // 1% or 3%
+const srlImpozitCota = 1; // single micro-enterprise rate since 2026
 
 // PFA Calculations
 const pfaCalculations = computed(() => {
@@ -459,12 +457,12 @@ const pfaCalculations = computed(() => {
     if (venitNetAnual < 24300) {
       cassLunar = 2430 / 12; // 202,50 lei/lună
       cassNote = 'Sub 24.300 lei/an - minim 2.430 lei/an';
-    } else if (venitNetAnual >= 24300 && venitNetAnual <= 243000) {
+    } else if (venitNetAnual >= 24300 && venitNetAnual <= 291600) {
       cassLunar = venitNet * 0.10;
-      cassNote = '24.300-243.000 lei/an - 10% din venit net';
+      cassNote = '24.300-291.600 lei/an - 10% din venit net';
     } else {
-      cassLunar = 24300 / 12; // 2.025 lei/lună
-      cassNote = 'Peste 243.000 lei/an - maxim 24.300 lei/an';
+      cassLunar = 29160 / 12; // 2.430 lei/lună, cap of 72 minimum wages
+      cassNote = 'Peste 291.600 lei/an - maxim 29.160 lei/an';
     }
   }
 
@@ -493,8 +491,8 @@ const pfaCalculations = computed(() => {
 // SRL Calculations
 const srlCalculations = computed(() => {
   // Tax on revenues (not profit!)
-  const impozitVenituri = srlIncome.value * (srlImpozitCota.value / 100);
-  const impozitNote = `Micro-întreprindere ${srlImpozitCota.value}% pe venituri`;
+  const impozitVenituri = srlIncome.value * (srlImpozitCota / 100);
+  const impozitNote = `Micro-întreprindere ${srlImpozitCota}% pe venituri`;
 
   // Contributions from salary
   const casAngajat = srlSalary.value * 0.25; // 25% CAS employee
@@ -508,12 +506,12 @@ const srlCalculations = computed(() => {
   // Net salary = Gross salary - CAS - CASS - Income tax
   const salariuNet = srlSalary.value - casAngajat - cassAngajat - impozitVenitAngajat;
 
-  // Dividends: 10% tax on accounting profit
-  const taxaDividende = profitContabil * 0.10;
+  // Dividends: 16% tax on accounting profit (dividends paid from 2026)
+  const taxaDividende = profitContabil * 0.16;
   const dividendeBruteDupaTaxa = profitContabil - taxaDividende;
 
   // CASS on dividends: fixed amounts by bracket of the yearly net dividend
-  // (after the dividend tax). Owed even when the owner is also an employee.
+  // (after the 16% tax). Owed even when the owner is also an employee.
   const dividendeAnuale = dividendeBruteDupaTaxa * 12;
   let cassDividende = 0;
   let cassDividendeNote = '';
@@ -554,7 +552,7 @@ const srlCalculations = computed(() => {
     taxaDividende,
     dividendeNet: dividendeNeteFinal,
     totalVenitNet: totalVenitNetProprietar,
-    cotaImpozit: srlImpozitCota.value,
+    cotaImpozit: srlImpozitCota,
     impozitNote,
     cassDividende,
     cassDividendeNote
