@@ -221,17 +221,6 @@
               <small>Micro-întreprindere - cifră de afaceri sub 500.000 €</small>
             </div>
 
-            <div class="form-group-checkbox">
-              <input
-                type="checkbox"
-                id="srl-proprietar-salariat"
-                v-model="srlProprietarSalariat"
-              />
-              <label for="srl-proprietar-salariat">
-                Proprietarul este salariat altundeva (pentru calcul CASS pe dividende)
-              </label>
-            </div>
-
             <!-- Results SRL -->
             <div class="results-section">
               <h3><i class="fas fa-calculator"></i> Rezultate Calcul SRL (Micro-întreprindere)</h3>
@@ -377,7 +366,7 @@
                 <li><strong>PFA - CASS (10%):</strong> Dacă salariat - 10% fără minim | Dacă NU salariat - Sub 24.300 lei/an: 2.430 lei/an | 24.300-243.000 lei/an: 10% din venit net | Peste 243.000 lei/an: 24.300 lei/an</li>
                 <li><strong>PFA - Impozit:</strong> 10% pe (venit net − CAS − CASS)</li>
                 <li><strong>SRL Micro-întreprindere:</strong> Impozit pe venituri (1% IT/producție/construcții, 3% alte domenii). Obligatoriu 1 angajat.</li>
-                <li><strong>Dividende SRL:</strong> Impozit 10% + CASS pe plafoane (dacă proprietarul NU este salariat altundeva)</li>
+                <li><strong>Dividende SRL:</strong> Impozit 10% + CASS pe dividendele nete: sub 24.300 lei/an - nimic | 24.300-48.600 lei/an - 2.430 lei/an | 48.600-97.200 lei/an - 4.860 lei/an | Peste 97.200 lei/an - 9.720 lei/an. Se datorează și dacă proprietarul este salariat.</li>
               </ul>
             </div>
           </div>
@@ -425,7 +414,6 @@ const srlIncome = ref(10000);
 const srlExpenses = ref(4000);
 const srlSalary = ref(3000);
 const srlImpozitCota = ref(3); // 1% or 3%
-const srlProprietarSalariat = ref(false); // For CASS on dividends
 
 // PFA Calculations
 const pfaCalculations = computed(() => {
@@ -524,29 +512,24 @@ const srlCalculations = computed(() => {
   const taxaDividende = profitContabil * 0.10;
   const dividendeBruteDupaTaxa = profitContabil - taxaDividende;
 
-  // CASS on dividends (if owner is NOT employed elsewhere)
+  // CASS on dividends: fixed amounts by bracket of the yearly net dividend
+  // (after the dividend tax). Owed even when the owner is also an employee.
+  const dividendeAnuale = dividendeBruteDupaTaxa * 12;
   let cassDividende = 0;
   let cassDividendeNote = '';
 
-  if (!srlProprietarSalariat.value) {
-    // Calculate CASS on dividends based on brackets
-    const dividendeAnuale = dividendeBruteDupaTaxa * 12;
-
-    if (dividendeAnuale < 24300) {
-      cassDividende = 2430 / 12; // 202,50 lei/lună
-      cassDividendeNote = 'CASS dividende: sub 24.300 lei/an - minim';
-    } else if (dividendeAnuale >= 24300 && dividendeAnuale < 48600) {
-      cassDividende = dividendeBruteDupaTaxa * 0.10;
-      cassDividendeNote = 'CASS dividende: 24.300-48.600 lei/an - 10%';
-    } else if (dividendeAnuale >= 48600 && dividendeAnuale < 97200) {
-      cassDividende = 4860 / 12; // 405 lei/lună
-      cassDividendeNote = 'CASS dividende: 48.600-97.200 lei/an - fix';
-    } else {
-      cassDividende = 9720 / 12; // 810 lei/lună
-      cassDividendeNote = 'CASS dividende: peste 97.200 lei/an - maxim';
-    }
+  if (dividendeAnuale < 24300) {
+    cassDividende = 0;
+    cassDividendeNote = 'CASS dividende: sub 24.300 lei/an - nu se datorează';
+  } else if (dividendeAnuale < 48600) {
+    cassDividende = 2430 / 12; // 202,50 lei/lună
+    cassDividendeNote = 'CASS dividende: 24.300-48.600 lei/an - 2.430 lei/an';
+  } else if (dividendeAnuale < 97200) {
+    cassDividende = 4860 / 12; // 405 lei/lună
+    cassDividendeNote = 'CASS dividende: 48.600-97.200 lei/an - 4.860 lei/an';
   } else {
-    cassDividendeNote = 'Proprietar salariat - fără CASS pe dividende';
+    cassDividende = 9720 / 12; // 810 lei/lună
+    cassDividendeNote = 'CASS dividende: peste 97.200 lei/an - maxim 9.720 lei/an';
   }
 
   const dividendeNeteFinal = dividendeBruteDupaTaxa - cassDividende;
